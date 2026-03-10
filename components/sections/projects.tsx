@@ -1,4 +1,16 @@
+"use client"
+
+import { motion } from "framer-motion"
 import ProjectCard from "@/components/ui/project-card"
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
 
 export default function Projects() {
   return (
@@ -16,8 +28,13 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
+        <motion.div
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <ProjectCard
             title="AI Study Assistant"
             description="An AI-powered platform that helps students manage study sessions while prioritizing mental wellness."
@@ -32,10 +49,9 @@ export default function Projects() {
             title="Interactive Developer Portfolio"
             description="A cinematic portfolio built with Next.js, 3D visuals, and motion systems."
           />
-
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </section >
   )
 }

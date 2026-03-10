@@ -16,8 +16,13 @@ export default function Contact() {
             new ideas? Feel free to reach out.
           </p>
 
-          <Button size="lg">
-            Get in Touch
+          <Button
+            size="lg"
+            asChild
+          >
+            <a href="mailto:shrguhaneogi@gmail.com">
+              Get in Touch
+            </a>
           </Button>
 
         </div>
