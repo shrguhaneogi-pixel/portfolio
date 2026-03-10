@@ -27,3 +27,49 @@ body {
   color: hsl(var(--foreground));
   font-family: system-ui, sans-serif;
 }
+
+@layer utilities {
+
+  .text-display {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .text-hero {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  .text-section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .text-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .container-main {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .section-spacing {
+    padding-block: 6rem;
+  }
+
+}
