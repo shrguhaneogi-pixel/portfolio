@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Hero3D from "@/components/three/hero-3d"
 
 const container = {
   hidden: {},
@@ -28,9 +29,10 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="section-spacing">
+    <section className="section-spacing relative overflow-hidden">
+        <Hero3D />
       <div className="container-main">
-        
+
         <motion.div
           variants={container}
           initial="hidden"
