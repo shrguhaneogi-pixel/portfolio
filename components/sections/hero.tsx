@@ -1,23 +1,54 @@
+"use client"
+
+import { motion } from "framer-motion"
 import Link from "next/link"
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+}
 
 export default function Hero() {
   return (
     <section className="section-spacing">
       <div className="container-main">
+        
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="max-w-3xl space-y-6"
+        >
 
-        <div className="max-w-3xl space-y-6">
-
-          <h1 className="text-display">
+          <motion.h1 variants={item} className="text-display">
             Building Intelligent Interfaces
-          </h1>
+          </motion.h1>
 
-          <p className="text-body-lg">
+          <motion.p variants={item} className="text-body-lg">
             I'm Shreyas, a Full-Stack Developer and AI Engineer building
             modern web experiences and intelligent products powered by
             cutting-edge technologies.
-          </p>
+          </motion.p>
 
-          <div className="flex gap-4 pt-4">
+          <motion.div variants={item} className="flex gap-4 pt-4">
 
             <Link
               href="/projects"
@@ -33,9 +64,9 @@ export default function Hero() {
               Contact Me
             </Link>
 
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>
