@@ -4,6 +4,7 @@ import "./globals.css";
 
 import ScrollProvider from "@/components/providers/scroll-provider"
 import Navbar from "@/components/layout/navbar"
+import Footer from "@/components/layout/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +33,10 @@ export default function RootLayout({
       >
         <ScrollProvider>
           <Navbar />
-          
+
           {children}
+
+          <Footer />
         </ScrollProvider>
       </body>
     </html>
