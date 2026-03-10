@@ -1,6 +1,10 @@
 "use client"
 
-import Spline from "@splinetool/react-spline"
+import dynamic from "next/dynamic"
+
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
+  ssr: false,
+})
 
 export default function Hero3D() {
   return (
