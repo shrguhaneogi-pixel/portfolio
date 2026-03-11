@@ -41,6 +41,8 @@ export default function Projects() {
               key={project.title}
               title={project.title}
               description={project.description}
+              github={project.github}
+              demo={project.demo}
             />
           ))}
         </motion.div>
