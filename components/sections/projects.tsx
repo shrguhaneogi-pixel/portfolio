@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import ProjectCard from "@/components/ui/project-card"
+import { projects } from "@/data/projects"
 
 const containerVariants = {
   hidden: {},
@@ -35,20 +36,13 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <ProjectCard
-            title="AI Study Assistant"
-            description="An AI-powered platform that helps students manage study sessions while prioritizing mental wellness."
-          />
-
-          <ProjectCard
-            title="RepoLens AI"
-            description="A tool that analyzes GitHub repositories using AI to explain code structure and project architecture."
-          />
-
-          <ProjectCard
-            title="Interactive Developer Portfolio"
-            description="A cinematic portfolio built with Next.js, 3D visuals, and motion systems."
-          />
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              description={project.description}
+            />
+          ))}
         </motion.div>
 
       </div>
