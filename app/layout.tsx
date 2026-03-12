@@ -17,8 +17,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "My Developer Portfolio",
+  title: "Shreyas Guha Neogi | AI Engineer & Full-Stack Developer",
+
+  description:
+    "AI Engineer and Full-Stack Developer building intelligent systems, developer tools, and cinematic web experiences.",
+
+  keywords: [
+    "Shreyas Guha Neogi",
+    "AI Engineer",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "Machine Learning Engineer",
+    "Developer Portfolio",
+  ],
+
+  authors: [{ name: "Shreyas Guha Neogi" }],
+
+  openGraph: {
+    title: "Shreyas Guha Neogi — AI Engineer",
+    description:
+      "Interactive developer portfolio showcasing AI systems, full-stack projects, and cinematic web engineering.",
+    url: "https://your-portfolio.vercel.app",
+    siteName: "Shreyas Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Shreyas Guha Neogi — AI Engineer",
+    description:
+      "AI systems, developer tools, and immersive web engineering.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
