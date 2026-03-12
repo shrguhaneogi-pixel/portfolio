@@ -43,6 +43,7 @@ export default function Projects() {
               description={project.description}
               github={project.github}
               demo={project.demo}
+              tech={project.tech}
             />
           ))}
         </motion.div>

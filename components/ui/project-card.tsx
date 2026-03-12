@@ -9,6 +9,7 @@ type ProjectCardProps = {
   description: string
   github: string
   demo?: string
+  tech: string[]
 }
 
 export default function ProjectCard({
@@ -16,6 +17,7 @@ export default function ProjectCard({
   description,
   github,
   demo,
+  tech,
 }: ProjectCardProps) {
   return (
     <motion.div
@@ -30,10 +32,21 @@ export default function ProjectCard({
         </CardHeader>
 
         <CardContent className="space-y-4">
+
           <p className="text-body">{description}</p>
 
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-2">
+            {tech.map((t) => (
+              <span
+                key={t}
+                className="text-xs px-2 py-1 rounded-md bg-muted"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
 
+          <div className="flex gap-3">
             <Button asChild size="sm">
               <a href={github} target="_blank">
                 GitHub
@@ -47,7 +60,6 @@ export default function ProjectCard({
                 </a>
               </Button>
             )}
-
           </div>
 
         </CardContent>
