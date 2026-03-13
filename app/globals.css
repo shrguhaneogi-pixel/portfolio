@@ -72,4 +72,8 @@ body {
     padding-block: 6rem;
   }
 
+  body {
+    cursor: none;
+  }
+
 }

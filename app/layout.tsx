@@ -5,6 +5,7 @@ import "./globals.css";
 import ScrollProvider from "@/components/providers/scroll-provider"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer";
+import CustomCursor from "@/components/ui/custom-cursor"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,6 +70,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CustomCursor />
         <ScrollProvider>
           <Navbar />
 
