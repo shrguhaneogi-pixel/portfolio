@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Magnetic from "@/components/animations/magnetic"
 
 type ProjectCardProps = {
   title: string
@@ -47,19 +48,25 @@ export default function ProjectCard({
           </div>
 
           <div className="flex gap-3">
-            <Button asChild size="sm">
-              <a href={github} target="_blank">
-                GitHub
-              </a>
-            </Button>
 
-            {demo && (
-              <Button asChild size="sm" variant="secondary">
-                <a href={demo} target="_blank">
-                  Live Demo
+            <Magnetic>
+              <Button asChild size="sm">
+                <a href={github} target="_blank">
+                  GitHub
                 </a>
               </Button>
+            </Magnetic>
+
+            {demo && (
+              <Magnetic>
+                <Button asChild size="sm" variant="secondary">
+                  <a href={demo} target="_blank">
+                    Live Demo
+                  </a>
+                </Button>
+              </Magnetic>
             )}
+
           </div>
 
         </CardContent>
